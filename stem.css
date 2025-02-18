@@ -1,0 +1,101 @@
+/* Neon Purple-Themed STEM Trivia */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: #9b59b6; /* Neon purple text */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+  text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #9b59b6;
+  text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+}
+
+#question {
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+}
+
+#options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #1a1a1a;
+  background: #9b59b6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #9b59b6, 0 0 15px #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: #1a1a1a;
+  color: #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.7), 0 0 20px #9b59b6;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#feedback {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #1a1a1a;
+  background: #9b59b6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #9b59b6, 0 0 15px #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1a1a1a;
+  color: #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.7), 0 0 20px #9b59b6;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#score {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #9b59b6;
+  text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+}

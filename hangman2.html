@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="hangman2style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <pre id="hangman-drawing"></pre>
+        <div id="game-info">
+            <h1>Hangman</h1>
+            <div id="word-display">_ _ _ _ _</div>
+            <div id="alphabet-buttons"></div>
+            <div id="feedback">
+                <p><strong>Correct Guesses:</strong> <span id="correct-letters"></span></p>
+                <p><strong>Incorrect Guesses:</strong> <span id="wrong-letters"></span></p>
+            </div>
+            <div id="points">Points: 0</div>
+            <div id="word-message"></div> <!-- Message for the correct word -->
+
+            <div id="controls">
+                <button id="new-word-button">New Word</button>
+                <button id="quit-button">Quit</button>
+            </div>
+        </div>
+    </div>
+    <script src="hangman2script.js"></script>
+</body>
+</html>

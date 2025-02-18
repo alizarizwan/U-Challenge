@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="U-Challenge Logo" class="header-icon">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="game-category" onclick="openCategory('Trivia')">
+                <h2>Trivia Challenges</h2>
+                <img src="trivia.png" alt="Trivia Icon" class="category-icon">
+            </div>
+            <div class="game-category" onclick="openCategory('Games')">
+                <h2>Games</h2>
+                <img src="games.png" alt="Games Icon" class="category-icon">
+            </div>
+            <div class="game-category" onclick="openCategory('SpinBetWin')">
+                <h2>Spin, Bet, Win</h2>
+                <img src="spin.png" alt="Spin Icon" class="category-icon">
+            </div>
+        </section>
+        
+        <section class="leaderboards">
+        <h2>Leaderboards</h2>
+
+        <!-- University Leaderboard -->
+        <div id="university-leaderboard">
+            <h3>University Leaderboard</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>University</th>
+                        <th>Total Players</th>
+                        <th>Total Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- University leaderboard data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Player Leaderboard -->
+        <div id="player-leaderboard">
+            <h3>Player Leaderboard</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Game</th>
+                        <th>Best Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Player leaderboard data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        </section>
+
+        <!-- Feedback Button -->
+        <button id="feedback-button" class="btn">Give Feedback</button>
+
+        <!-- Feedback Popup -->
+        <div id="feedback-popup" class="popup">
+            <form id="feedback-form" onsubmit="submitFeedback(event)">
+                <button type="button" class="close-button" onclick="closePopup('feedback-popup')">✖</button>
+                <h2>Your Feedback</h2>
+                <div class="form-group">
+                    <label for="feedback-text">Share your thoughts:</label>
+                    <textarea id="feedback-text" name="feedback-text" rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="form-popup" class="popup">
+        <form id="registration-form" onsubmit="registerPlayer(event)">
+            <h2>Register to Play</h2>
+            <label for="player-name">Name:</label>
+            <input type="text" id="player-name" name="player-name" required>
+            <label for="university">University:</label>
+            <select id="university" name="university" required>
+                <option value="">Select Your University</option>
+                <!-- Options dynamically populated -->
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Popup for Game Links -->
+    <div id="links-popup" class="popup">
+        <h2>Choose Your Game</h2>
+        <button class="close-button" onclick="closePopup('links-popup')">✖</button>
+        <div id="game-buttons" class="game-buttons">
+            <!-- Game buttons will be dynamically inserted -->
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 U-Challenge. All Rights Reserved.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a> | <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

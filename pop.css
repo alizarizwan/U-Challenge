@@ -1,0 +1,116 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff69b4;
+  text-shadow: 0 0 10px #ff69b4;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 1.5em;
+}
+
+#options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option {
+  padding: 15px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.option:hover {
+  background: #1a1a1a; /* Pure black background on hover */
+  color: #ff69b4; /* Bright pink text color */
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; /* Pink glow around the button */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#feedback {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#controls button {
+  padding: 10px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#controls button:hover, .button:hover {
+  background: #000000; /* Pure black background on hover */
+  color: #ff69b4; /* Bright pink text color */
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; /* Pink glow around the button */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#controls button:hover, .button:hover {
+  background: #000000; /* Pure black background on hover */
+  color: #ff69b4; /* Bright pink text color */
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; /* Pink glow around the button */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+#score {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #ff69b4;
+}
+
+/* Modal styles */
+#endGameModal h2 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+#endGameModal p {
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+

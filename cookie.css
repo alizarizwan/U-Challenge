@@ -1,0 +1,179 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: bold;
+    color: #5a3e1b;
+}
+
+h1, h2 {
+    border-bottom: 2px solid #8b572a;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://img.icons8.com/color/48/000000/cookie.png') repeat;
+    background-size: 50px;
+    animation: fall 75s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 5000px;
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Game box styling */
+.game, .status-container {
+    background: #ffe6f2; /* Retained original background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 0 10px 2px rgba(255, 153, 204, 0.6); /* Dimmer neon pink glow */
+    border: 2px solid #ff99cc; /* Neon pink border */
+}
+
+.game h1 {
+    font-size: 2.5rem;
+    color: #5a3e1b; /* Retained original color */
+    text-shadow: 0 0 10px rgba(255, 153, 204, 0.6); /* Dimmer neon pink glow */
+}
+
+#cookie-btn {
+    background: #ff99cc; /* Neon pink */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0 0 15px 3px rgba(255, 153, 204, 0.6); /* Dimmer glow for button */
+}
+
+#cookie-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff80b3; /* Slightly lighter neon pink */
+    box-shadow: 0 0 15px 3px rgba(255, 128, 179, 0.6); /* Slightly brighter on hover */
+}
+
+#cookie-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px 3px rgba(255, 102, 255, 0.6); /* Dim glow when active */
+}
+
+.status-container h2 {
+    font-size: 2rem;
+    color: #5a3e1b; /* Retained original color */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 153, 204, 0.6); /* Dimmer pink glow */
+}
+
+li {
+    margin: 10px 10px;
+    font-size: 1rem;
+    font-weight: bold; 
+    color: #8b572a; /* Retained original color */
+    text-shadow: 0 0 10px rgba(255, 153, 204, 0.5); /* Softer neon pink glow */
+}
+
+#status {
+    color: #d84393; /* Original color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(216, 67, 147, 0.6); /* Dimmer matching glow */
+}
+
+#counter {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #d84393; /* Original color */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(216, 67, 147, 0.6); /* Dimmer matching glow */
+}
+
+#quit-btn {
+    background: #ff6666; /* Light red */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 0 15px 3px rgba(255, 102, 102, 0.6); /* Glow */
+}
+
+#quit-btn:hover {
+    background-color: #ff4d4d; /* Darker red */
+    box-shadow: 0 0 20px 5px rgba(255, 77, 77, 0.8);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures popup is on top of all content */
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1010; /* Popup content on top */
+}
+
+.main-page-link {
+    text-decoration: none;
+    color: #ff66b2;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.main-page-link:hover {
+    background: #ff66b2;
+    color: white;
+}

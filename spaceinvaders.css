@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Title Styling */
+#game-title {
+  margin: 20px 0;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* Title Animation */
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px cyan, 0 0 40px cyan;
+  }
+  100% {
+    text-shadow: 0 0 20px white, 0 0 30px cyan, 0 0 40px magenta, 0 0 50px magenta;
+  }
+}
+
+/* Game Container */
+#game-container {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 700px;
+  background: black;
+  border: 2px solid white;
+  box-shadow: 0 0 20px cyan, 0 0 30px magenta;
+  overflow: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Starry background */
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+/* Score and Lives Display */
+#score-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 0 5px white;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 20px);
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  background: transparent;
+}
+
+#game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#game-over-popup {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+#game-over-popup h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#game-over-popup p {
+  margin-bottom: 20px;
+}
+
+#game-over-popup button {
+  padding: 10px 20px;
+  background: cyan;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+#game-over-popup button:hover {
+  background: magenta;
+}

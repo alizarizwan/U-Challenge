@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Snake Game</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <p id="instructions">Press Space Bar to Start. Tries Left: 10</p>
+    <p id="controls">
+      <strong>Controls:</strong> W = Up, A = Left, S = Down, D = Right
+    </p>
+    <p id="score">Score: 0</p>
+    <p id="high-score">High Score: 0</p>
+    <button id="quitButton">Quit Game</button>
+  </div>
+
+  <!-- Modal Popup -->
+  <div id="endGameModal" class="modal">
+    <div class="modal-content">
+      <h2>Game Over!</h2>
+      <p>Your score: <span id="finalScore"></span></p>
+      <form id="endGameForm">
+        <button type="submit">Go to Main Page</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="snake.js"></script>
+</body>
+</html>

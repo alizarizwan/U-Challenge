@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Knowledge Trivia</title>
+  <link rel="stylesheet" href="GK.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>General Knowledge Trivia</h1>
+    <div id="question-container">
+      <p id="question">Press "Start" to begin the quiz!</p>
+      <div id="options">
+        <button class="option" onclick="selectOption(0)">Option 1</button>
+        <button class="option" onclick="selectOption(1)">Option 2</button>
+        <button class="option" onclick="selectOption(2)">Option 3</button>
+        <button class="option" onclick="selectOption(3)">Option 4</button>
+      </div>
+    </div>
+    <div id="feedback"></div>
+    <div id="controls">
+      <p id="score">Score: 0</p>
+      <button id="start-btn" onclick="startGame()">Start</button>
+    </div>
+  </div>
+  <script src="GK.js"></script>
+</body>
+</html>

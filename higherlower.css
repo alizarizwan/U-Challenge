@@ -1,0 +1,147 @@
+﻿/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: 
+        radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+        radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+        radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+        radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+        radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+        radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+        radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+        radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+        linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+        linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-size: 100px 100px;
+    background-color: #300;
+    color: #fff; /* Ensure text remains visible */
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.95); /* Soft white */
+    border: 2px solid #ff6f61; /* Coral border */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+    color: #e60000; /* Brighter, more vibrant red */
+    text-shadow: 0 0 20px rgba(230, 0, 0, 0.9), 0 0 25px rgba(230, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #444; /* Medium gray */
+    margin: 10px 0;
+}
+
+.number {
+    font-size: 80px;
+    color: #32cd32; /* Slightly brighter green */
+    text-shadow: 0 0 15px rgba(50, 205, 50, 0.8), 0 0 20px rgba(50, 205, 50, 0.6);
+    margin: 20px 0;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+#higher-btn {
+    background-color: #f39c12; /* Bright orange */
+    box-shadow: 0 0 10px #f39c12, 0 0 20px rgba(243, 156, 18, 0.8);
+}
+
+#lower-btn {
+    background-color: #9b59b6; /* Purple */
+    box-shadow: 0 0 10px #9b59b6, 0 0 20px rgba(155, 89, 182, 0.8);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0 0 20px currentColor;
+}
+
+#score, #tries {
+    font-size: 22px;
+    color: #444; /* Medium gray */
+    margin: 10px 0;
+}
+
+.end-message {
+    font-size: 24px;
+    color: #ff6f61; /* Coral */
+    text-shadow: 0 0 15px rgba(255, 111, 97, 0.8), 0 0 20px rgba(255, 111, 97, 0.6);
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Popup overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 80%;
+}
+
+.modal p {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.modal button {
+    background-color: #3498db; /* Bright blue */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #2980b9; /* Slightly darker blue */
+}

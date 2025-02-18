@@ -1,0 +1,101 @@
+/* Sports Trivia Neon Blue Theme */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: #007bff; /* Neon blue text */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+}
+
+#question {
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+}
+
+#options {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for options */
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #1a1a1a;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #007bff, 0 0 15px #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: #1a1a1a;
+  color: #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.7), 0 0 20px #007bff;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#feedback {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #1a1a1a;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #007bff, 0 0 15px #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1a1a1a;
+  color: #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.7), 0 0 20px #007bff;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#score {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+}

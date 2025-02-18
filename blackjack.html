@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack Game</title>
+  <link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Blackjack</h1>
+    <div id="money">
+      <p>Balance: $<span id="balance">100</span></p>
+      <label for="bet-amount">Bet Amount: $</label>
+      <input type="number" id="bet-amount" min="1" value="10">
+    </div>
+    <div id="dealer">
+      <h2>Dealer's Hand</h2>
+      <div id="dealer-cards"></div>
+      <p id="dealer-score">Dealer Score: </p>
+      <p id="dealer-wins">Dealer Wins: 0</p>
+    </div>
+    <div id="player">
+      <h2>Your Hand</h2>
+      <div id="player-cards"></div>
+      <p id="player-score">Player Score: </p>
+      <p id="player-wins">Player Wins: 0</p>
+    </div>
+    <div id="controls">
+      <button id="place-bet">Place Bet</button>
+      <button id="hit" disabled>Hit</button>
+      <button id="stand" disabled>Stand</button>
+    </div>
+    <p id="result"></p>
+  </div>
+
+  <!-- Modal for Game Over -->
+  <div id="game-over-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Game Over</h2>
+      <p>Your balance is $0. Better luck next time!</p>
+      <button id="return-home">Return to Main Page</button>
+    </div>
+  </div>
+
+  <script src="blackjack.js"></script>
+</body>
+</html>

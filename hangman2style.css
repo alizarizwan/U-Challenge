@@ -1,0 +1,226 @@
+﻿/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right,  #12063b, #1d0d54);
+    color: #ffffff;
+    line-height: 1.8; /* Increase line spacing */
+}
+
+/* Main Container */
+#game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 10px;
+    border-radius: 16px;
+    background: #1e0033;
+    box-shadow: 0 0 30px #8c0099, inset 0 0 10px #290066;
+    max-width: 900px;
+    width: 90%;
+    height: 90%;
+    border: 2px solid #800080; /* Purple Border */
+    line-height: 2; /* Extra line spacing inside the container */
+}
+
+/* Hangman Container */
+#hangman-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #290066;
+    box-shadow: 0 0 20px #9933ff;
+    border: 2px solid #800080;
+    line-height: 2; /* Space out lines in the hangman container */
+}
+
+/* Hangman Drawing Styling */
+#hangman-drawing {
+    font-size: 30px;
+    white-space: pre;
+    color: #ff00ff; /* Magenta */
+    text-align: center;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 20px; /* Add space below the drawing */
+}
+
+/* Game Info Container */
+#game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all child elements */
+    gap: 1px; /* Space between child elements */
+    flex: 2;
+    padding: 20px;
+    line-height: 2; /* Extra spacing for text */
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    margin-top: 30px;
+    font-size: 60px;
+    font-family: 'Fira Code', sans-serif;
+    margin: 0;
+    color: #ff00ff; /* Magenta */
+    text-align: center;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #800080; /* Neon Glow */
+    margin-bottom: 28px; /* Add extra space below the title */
+}
+
+/* Word Display */
+#word-display {
+    font-size: 20px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: #ff99ff; /* Pink */
+    text-align: center;
+    text-shadow: 0 0 10px #ff99ff;
+    white-space: nowrap;
+    margin-bottom: 10px; /* Add space below the word display */
+}
+
+/* Alphabet Buttons */
+#alphabet-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Keep buttons centered within the container */
+    align-items: center; /* Ensure vertical alignment */
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px; /* Add space between blanks and buttons */
+    margin-bottom: 8px;
+}
+
+.letter-btn {
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #800080, #3333ff); /* Purple to Blue Gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    text-shadow: 0 0 10px #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 15px #9933ff; /* Purple Glow */
+}
+
+.letter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff; /* Magenta Glow */
+}
+
+.letter-btn:disabled {
+    background: #290066; /* Muted Purple */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Feedback Message */
+#feedback {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+    margin-bottom: 2px; /* Add space below feedback message */
+    gap: 2px;
+}
+
+#feedback p {
+    margin: 0; /* Remove any default margins on <p> tags */
+    margin-top: 10px;
+    margin-bottom: 5px; /* Add a smaller margin below each paragraph */
+}
+
+/* Points Display */
+#points {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff00ff; /* Magenta */
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 4px; /* Add extra spacing */
+}
+
+/* Message Styling */
+#word-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff00ff; /* Magenta */
+    text-align: center;
+    text-shadow: 0 0 10px #ff00ff;
+    height: 26px; /* Fixed height to reserve space */
+    margin-top: 8px; /* Space above the message */
+    margin-bottom: 14px; /* Space below the message */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth appearance */
+    display: flex;
+    justify-content: center; /* Center-align the message */
+    align-items: center; /* Vertically center-align */
+}
+
+#word-message.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Control Buttons */
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px; /* Add spacing below controls */
+}
+
+#new-word-button, #quit-button {
+    background: linear-gradient(45deg, #800080, #3333ff);
+    padding: 12px 24px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #fff;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#new-word-button:hover, #quit-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* Popup Styling */
+.popup {
+    color: #ffffff;
+    background: linear-gradient(45deg, #800080, #3333ff);
+    border-radius: 15px;
+    text-shadow: 0 0 10px #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styled Buttons for Popup */
+.popup button {
+    background: linear-gradient(45deg, #ff00ff, #800080);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.popup button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff;
+}

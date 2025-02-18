@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tac.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="game-container">
+        <div class="scoreboard">
+            <p>Player: <span id="player-score">0</span></p>
+            <p>Computer: <span id="computer-score">0</span></p>
+        </div>
+        <div class="grid">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="status"></div>
+        <div class="button-container">
+            <button class="restart-btn">Restart Game</button>
+            <button class="quit-btn">Quit</button>
+        </div>
+    </div>
+
+    <!-- Quit form pop-up -->
+    <div id="quit-popup" class="popup hidden">
+        <div class="popup-content">
+            <p>Your current score:</p>
+            <p>Player: <span id="popup-player-score">0</span></p>
+            <p>Computer: <span id="popup-computer-score">0</span></p>
+            <p>Are you sure you want to quit?</p>
+            <button id="confirm-quit">Yes, Quit</button>
+            <button id="cancel-quit">Cancel</button>
+        </div>
+    </div>
+
+    <script src="tic.js"></script>
+</body>
+</html>

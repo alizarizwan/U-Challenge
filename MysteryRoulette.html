@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Roulette</title>
+    <link rel="stylesheet" href="MysteryRoulettestyles.css">
+</head>
+<body>
+    <h1 class="title">Mystery Roulette</h1>
+
+    <!-- Points Display -->
+    <div class="points-container">
+        <p id="points-display">Points: 100</p>
+    </div>
+
+    <!-- Guess Count Display -->
+    <div class="guess-count-container">
+        <p id="guess-count-display">Guesses Made: 0 / 10</p>
+    </div>
+    
+    <div class="guess-container">
+        <label for="guess-number">Enter Your Guess (0-36):</label>
+        <input type="number" id="guess-number" min="0" max="36" />
+        <p id="feedback"></p>
+    </div>
+
+    <div class="roulette-container">
+        <div class="wheel-container">
+            <div class="wheel" id="wheel"></div>
+            <div class="pointer"></div>
+        </div>
+        <div class="controls">
+            <button id="spin">Spin</button>
+            <button id="reset" disabled>Reset</button>
+        </div>
+
+        <div class="result-history">
+            <h3>Result History</h3>
+            <ul id="result-history-list"></ul>
+        </div>
+
+        <div class="result">
+            <p><span id="result-number"></span> <span id="result-color"></span></p>
+        </div>
+    </div>
+
+    <!-- End Message -->
+    <p id="end-message"></p>
+
+    <script src="MysteryRoulettescript.js"></script>
+</body>
+</html>

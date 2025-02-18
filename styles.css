@@ -1,0 +1,402 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c0f1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background-color: #020203;
+    padding: 20px 0;
+    border-bottom: 3px solid #0ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+header .highlight {
+    color: #08f;
+}
+
+
+.logo img {
+    width: 400px;
+    margin: 0 auto; /* Centers the image if it’s treated as a block element */
+    display: block; /* Ensures the image behaves as a block-level element */
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.game-category {
+    background: linear-gradient(145deg, #1a233a, #0c0f1a);
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.game-category h2 {
+    color: #0ff;
+    font-size: 1.5em;
+    margin: 0;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.game-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.leaderboards {
+    margin-top: 40px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a233a;
+    padding: 20px;
+    border: 2px solid #0ff;
+    z-index: 1000;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.popup .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.popup .btn {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #0ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup .btn:hover {
+    background-color: #08f;
+}
+
+.game-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.game-buttons button {
+    background-color: #1a233a;
+    color: #0ff;
+    border: 2px solid #0ff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.game-buttons button:hover {
+    background-color: #08f;
+    color: #fff;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Leaderboards Styling */
+.leaderboards {
+    margin-top: 40px;
+    background: #1a233a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #0ff;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.leaderboards h2 {
+    color: #00d9ff; 
+    text-shadow: 0 0 15px #00d9ff, 0 0 30px #00d9ff; 
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.leaderboards h3 {
+    color: #0ff; 
+    text-shadow: 0 0 10px #0ff;
+    font-size: 22px;
+    margin-top: 35px;
+}
+
+.leaderboards table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboards th, .leaderboards td {
+    padding: 10px;
+    border: 1px solid #0ff;
+    text-align: left;
+    color: #fff;
+}
+
+.leaderboards th {
+    background-color: #0c0f1a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.leaderboards tr:nth-child(even) {
+    background-color: #1e233a;
+}
+
+.leaderboards tr:hover {
+    background-color: #0c0f1a;
+}
+
+.leaderboards td {
+    font-size: 14px;
+}
+
+.leaderboards th, .leaderboards td {
+    text-align: center;
+}
+
+/* Feedback form styling*/
+#feedback-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px; /* Reduced size */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#feedback-button:hover {
+    background-color: #08f;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a233a;
+    width: 35%; /* Smaller width for better layout */
+    padding: 30px;
+    border: 2px solid #0ff;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* Form Group */
+.popup .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.popup label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.popup textarea {
+    width: 95%;
+    height: 120px; /* Adjusted height */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Buttons */
+.popup .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #0ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.popup .btn:hover {
+    background-color: #08f;
+    color: #fff;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-button:hover {
+    color: #0ff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0c0f1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid #0ff;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #08f;
+    text-decoration: underline;
+}
+
+/* Styling for the form-popup specific to the registration form */
+#form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a233a;
+    width: 90%; /* Full width for small screens */
+    max-width: 300px; /* Adjusted width to match inputs */
+    padding: 20px;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#form-popup h2 {
+    text-align: center;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+    margin-bottom: 15px;
+}
+
+#form-popup input, #form-popup select {
+    width: 100%;
+    max-width: 300px; /* Keep inputs proportional */
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a2f3e;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+#form-popup button {
+    padding: 10px 20px;
+    background-color: #0ff;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#form-popup button:hover {
+    background-color: #08f;
+    color: #fff;
+}
+
+.category-icon {
+    max-width: 400px; /* Adjust this to make the image smaller */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image */
+    display: block;
+    padding-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    padding: 20px 20px;
+}

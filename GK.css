@@ -1,0 +1,105 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #32cd32;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #121212, #1c1c1c);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.3);
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #32cd32;
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32;
+}
+
+#options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #121212;
+  background: #32cd32;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.4);
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: #121212;
+  color: #32cd32;
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.7);
+  transform: scale(1.1);
+}
+
+#feedback {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #121212;
+  background: #32cd32;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #121212;
+  color: #32cd32;
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.7);
+  transform: scale(1.1);
+}
+
+#score {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #32cd32;
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32;
+}

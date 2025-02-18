@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link rel="stylesheet" href="pong.css">
+</head>
+<body>
+    <h1>Pong</h1>
+    <div>
+        <p>First to 5 wins!</p>
+    </div>
+    <nav class="buttons">
+        <button id="resetButton">Reset</button>
+        <button id="quitButton">Quit</button>
+    </nav>
+    <div id="gameContainer">
+        <canvas id="gameBoard" width="650" height="500"></canvas>
+        <div id="scoreText">0 : 0</div>
+    </div>
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <h2>Game Over!</h2>
+            <p id="finalScore"></p>
+            <button id="redirectButton">Go to Main Page</button>
+        </div>
+    </div>
+    <script src="pong.js"></script>
+</body>
+</html>
